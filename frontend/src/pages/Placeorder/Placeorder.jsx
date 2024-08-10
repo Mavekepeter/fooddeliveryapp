@@ -36,7 +36,7 @@ const Placeorder = () => {
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>Ksh{getTotalCartAmount()===0?0:2}</p>
+              <p>Ksh{getTotalCartAmount()===0?0:30}</p>
             </div>
             <hr />
             <div className="cart-total-details">
