@@ -14,7 +14,8 @@ const LoginPopup = ({setshowLogin}) => {
      email:"",
      password:""
 
-   })
+   });
+   const [loading, setLoading] = useState(false); // State to manage loading
    const onchangeHandler = (event)=>{
     const name = event.target.name;
     const value = event.target.value;
@@ -22,6 +23,7 @@ const LoginPopup = ({setshowLogin}) => {
    }
    const OnLogin = async (event)=>{
     event.preventDefault()
+    setLoading(true); // Start loading
     let newUrl = url;
     if (currentState==="Login") {
       newUrl += "/api/user/login"  
@@ -54,10 +56,10 @@ const LoginPopup = ({setshowLogin}) => {
           }
           
           <input name='email' onChange={onchangeHandler} value={data.email} type="email" placeholder='enter email' required />
-          <input name='password' onChange={onchangeHandler} value={data.password} type="pasword" placeholder='enter password' />
+          <input name='password' onChange={onchangeHandler} value={data.password} type="password" placeholder='enter password' />
           
         </div>
-        <button type='submit'>{currentState==="sign up"?"Create account":"Login"}</button>
+        <submitbutton type='submit' disabled={loading}>{loading ? 'Loading...' :currentState==="sign up"?"Create account":"Login"}</submitbutton>
         <div className="loginpopup-condition">
           <input type="checkbox" required />
           <p>By continuing I agree to the terms of use & privacy policy</p>
