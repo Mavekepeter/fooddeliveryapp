@@ -5,7 +5,7 @@ import profile_image from './profile_image.png'
 import upload_area from './upload_area.png'
 import parcel_icon from './parcel_icon.png'
 
-
+export const url = 'https://fooddeliveryapp-backend-3c13.onrender.com'
 export const assets ={
     logo,
     add_icon,
@@ -15,4 +15,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = 'https://fooddeliveryapp-backend-3c13.onrender.com'
+
