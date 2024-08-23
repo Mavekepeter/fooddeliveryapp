@@ -4,6 +4,7 @@ import axios from 'axios'
 import {toast} from 'react-toastify'
 import { useEffect } from 'react'
 import { assets } from '../../assets/assets'
+const url = https://fooddeliveryapp-backend-3c13.onrender.com
 
 const Order = ({url}) => {
   const [orders,setOrders] = useState([]);
